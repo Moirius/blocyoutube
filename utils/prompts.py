@@ -1,5 +1,6 @@
 # utils/prompts.py
 import json
+import os
 from utils.logger import get_logger
 
 logger = get_logger("prompts")
@@ -79,14 +80,28 @@ Transcript :
 
 # === CHARGEMENT PERSONNALISÉ ===
 
+PROMPT_FILE = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "custom_prompts.json")
+)
+
 try:
-    with open("custom_prompts.json", "r", encoding="utf-8") as f:
+    with open(PROMPT_FILE, "r", encoding="utf-8") as f:
         custom = json.load(f)
-        STORY_PROMPT_TEMPLATE = custom.get("STORY_PROMPT_TEMPLATE", STORY_PROMPT_TEMPLATE)
-        STORY_CONTINUATION_TEMPLATE = custom.get("STORY_CONTINUATION_TEMPLATE", STORY_CONTINUATION_TEMPLATE)
+        STORY_PROMPT_TEMPLATE = custom.get(
+            "STORY_PROMPT_TEMPLATE", STORY_PROMPT_TEMPLATE
+        )
+        STORY_CONTINUATION_TEMPLATE = custom.get(
+            "STORY_CONTINUATION_TEMPLATE", STORY_CONTINUATION_TEMPLATE
+        )
         HOOK_PROMPT_TEMPLATE = custom.get("HOOK_PROMPT_TEMPLATE", HOOK_PROMPT_TEMPLATE)
-        CAPTION_PROMPT_TEMPLATE = custom.get("CAPTION_PROMPT_TEMPLATE", CAPTION_PROMPT_TEMPLATE)
-        TIKTOK_CAPTION_PROMPT_TEMPLATE = custom.get("TIKTOK_CAPTION_PROMPT_TEMPLATE", TIKTOK_CAPTION_PROMPT_TEMPLATE)
+        CAPTION_PROMPT_TEMPLATE = custom.get(
+            "CAPTION_PROMPT_TEMPLATE", CAPTION_PROMPT_TEMPLATE
+        )
+        TIKTOK_CAPTION_PROMPT_TEMPLATE = custom.get(
+            "TIKTOK_CAPTION_PROMPT_TEMPLATE", TIKTOK_CAPTION_PROMPT_TEMPLATE
+        )
         logger.info("📥 Prompts personnalisés chargés depuis custom_prompts.json")
 except FileNotFoundError:
-    logger.info("📄 Aucun fichier custom_prompts.json trouvé — utilisation des prompts par défaut")
+    logger.info(
+        "📄 Aucun fichier custom_prompts.json trouvé — utilisation des prompts par défaut"
+    )

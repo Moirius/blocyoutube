@@ -3,6 +3,13 @@ import os
 
 sys.path.append(os.path.abspath("."))  # <- ajoute tiktokbot/ au path
 
+import importlib.util
+
+spec = importlib.util.find_spec("yt_dlp")
+if spec is None:
+    print("SKIPPED: yt_dlp non installé")
+    sys.exit(0)
+
 from generators.youtube import downloader
 
 

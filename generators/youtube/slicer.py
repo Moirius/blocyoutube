@@ -1,13 +1,19 @@
 import os
 import random
 from typing import List
-from moviepy.editor import VideoFileClip
+
+try:
+    from moviepy.editor import VideoFileClip
+except Exception:  # pragma: no cover - optional dependency
+    VideoFileClip = None
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
+
 def slice_video(slug: str, min_dur=None, max_dur=None):
     import os
+
     min_dur = min_dur or int(os.environ.get("MIN_DUR", 45))
     max_dur = max_dur or int(os.environ.get("MAX_DUR", 75))
 
@@ -18,6 +24,10 @@ def slice_video(slug: str, min_dur=None, max_dur=None):
     input_path = os.path.join("series", slug, "original.mp4")
     output_dir = os.path.join("series", slug, "parts")
     os.makedirs(output_dir, exist_ok=True)
+
+    if VideoFileClip is None:
+        logger.error("moviepy n'est pas installé")
+        raise RuntimeError("moviepy non disponible")
 
     clip = VideoFileClip(input_path)
     duration = clip.duration
@@ -44,16 +54,12 @@ def slice_video(slug: str, min_dur=None, max_dur=None):
             logger=None,
             preset="ultrafast",
             fps=24,
-            ffmpeg_params=["-movflags", "faststart"]
+            ffmpeg_params=["-movflags", "faststart"],
         )
 
         logger.info(f"🎬 Exporté : {output_path} ({end - start:.1f}s)")
 
-        segments.append({
-            "path": output_path,
-            "start": start,
-            "end": end
-        })
+        segments.append({"path": output_path, "start": start, "end": end})
 
         start = end
         part_num += 1

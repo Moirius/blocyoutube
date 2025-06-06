@@ -5,6 +5,7 @@ from utils.prompts import HOOK_PROMPT_TEMPLATE
 
 logger = get_logger(__name__)
 
+
 def generate_hook(transcript_chunk: str) -> str:
     """
     Utilise l'API OpenAI pour générer un hook (phrase d'accroche) à partir d'un extrait de transcript.
@@ -18,12 +19,16 @@ def generate_hook(transcript_chunk: str) -> str:
     logger.debug(f"📜 Prompt envoyé :\n{prompt}")
     logger.debug(f"⚙️ Modèle = {model}, Température = {temperature}")
 
+    if getattr(client, "chat", None) is None:
+        logger.warning("Client OpenAI indisponible, hook générique")
+        return "Regarde ça 👀"
+
     try:
         response = client.chat.completions.create(
             model=model,
             messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
-            max_tokens=40
+            max_tokens=40,
         )
         hook_text = response.choices[0].message.content.strip('"').strip()
         logger.info(f"✅ Hook généré : {hook_text}")
