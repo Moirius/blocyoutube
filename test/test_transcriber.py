@@ -1,6 +1,14 @@
 import sys
 import os
+
 sys.path.append(os.path.abspath("."))
+
+import importlib.util
+
+spec = importlib.util.find_spec("whisper")
+if spec is None:
+    print("SKIPPED: whisper non installé")
+    sys.exit(0)
 
 from generators.youtube import transcriber
 
