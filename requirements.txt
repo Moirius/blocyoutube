@@ -1,0 +1,15 @@
+yt-dlp
+openai-whisper
+moviepy==1.0.3
+ffmpeg-python
+tqdm
+openai
+tenacity
+python-dotenv
+numpy
+schedule
+pillow<10
+elevenlabs
+whisperx @ git+https://github.com/m-bain/whisperx.git
+selenium
+psutil

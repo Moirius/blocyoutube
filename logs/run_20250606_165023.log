@@ -1,0 +1,12 @@
+2025-06-06 16:50:23,969 - prompts - INFO - 📄 Aucun fichier custom_prompts.json trouvé — utilisation des prompts par défaut
+2025-06-06 16:50:23,971 - __main__ - INFO - 🚀 Traitement de la vidéo : https://www.youtube.com/watch?v=s-gsIESfkUA (slug: yt_1)
+2025-06-06 16:50:33,554 - __main__ - INFO - 📁 Vidéo téléchargée : series\yt_1\original.mp4
+2025-06-06 16:53:46,451 - __main__ - INFO - 📝 Transcription obtenue (279 segments)
+2025-06-06 16:53:47,253 - generators.youtube.slicer - INFO - ✂️ Vidéo à découper : series\yt_1\original.mp4 (572.1 secondes)
+2025-06-06 16:55:26,813 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_1\parts\part_1.mp4 (66.0s)
+2025-06-06 16:56:43,537 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_1\parts\part_2.mp4 (55.0s)
+2025-06-06 16:57:46,724 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_1\parts\part_3.mp4 (46.0s)
+2025-06-06 16:59:20,015 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_1\parts\part_4.mp4 (69.0s)
+2025-06-06 17:00:48,602 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_1\parts\part_5.mp4 (65.0s)
+2025-06-06 17:01:53,672 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_1\parts\part_6.mp4 (47.0s)
+2025-06-06 17:03:19,693 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_1\parts\part_7.mp4 (63.0s)

@@ -1,0 +1,22 @@
+2025-06-06 17:21:44,033 - generators.youtube.slicer - INFO - ✂️ Vidéo à découper : series\yt_2\original.mp4 (140.0 secondes)
+2025-06-06 17:21:52,825 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_2\parts\part_1.mp4 (62.0s)
+2025-06-06 17:22:03,510 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_2\parts\part_2.mp4 (74.0s)
+2025-06-06 17:22:04,131 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_2\parts\part_3.mp4 (4.0s)
+2025-06-06 17:22:05,233 - generators.youtube.composer - INFO - 🎬 Composition de : series\yt_2\parts\part_1.mp4
+2025-06-06 17:22:05,410 - generators.youtube.composer - INFO - 🎞️ Durée finale du clip : 62.00s
+2025-06-06 17:22:05,410 - generators.youtube.composer - INFO - 🕹️ Test fond gameplay : Free To Use Gameplay 4K 60FPS - Minecraft Parkour.mp4
+2025-06-06 17:22:07,234 - generators.youtube.composer - INFO - ✅ Fond sélectionné : Free To Use Gameplay 4K 60FPS - Minecraft Parkour.mp4
+2025-06-06 17:28:38,708 - generators.youtube.composer - INFO - ✅ Clip composé : videos\exports\yt_2\part_1.mp4
+2025-06-06 17:28:38,708 - generators.youtube.composer - INFO - 📁 Taille du fichier : 39.55 MB
+2025-06-06 17:28:40,387 - generators.youtube.composer - INFO - 🎬 Composition de : series\yt_2\parts\part_2.mp4
+2025-06-06 17:28:40,805 - generators.youtube.composer - INFO - 🎞️ Durée finale du clip : 74.00s
+2025-06-06 17:28:40,805 - generators.youtube.composer - INFO - 🕹️ Test fond gameplay : Free To Use Gameplay 4K 60FPS - Minecraft Parkour.mp4
+2025-06-06 17:28:42,886 - generators.youtube.composer - INFO - ✅ Fond sélectionné : Free To Use Gameplay 4K 60FPS - Minecraft Parkour.mp4
+2025-06-06 17:36:30,275 - generators.youtube.composer - INFO - ✅ Clip composé : videos\exports\yt_2\part_2.mp4
+2025-06-06 17:36:30,276 - generators.youtube.composer - INFO - 📁 Taille du fichier : 45.74 MB
+2025-06-06 17:36:31,264 - generators.youtube.composer - INFO - 🎬 Composition de : series\yt_2\parts\part_3.mp4
+2025-06-06 17:36:31,433 - generators.youtube.composer - INFO - 🎞️ Durée finale du clip : 4.04s
+2025-06-06 17:36:31,433 - generators.youtube.composer - INFO - 🕹️ Test fond gameplay : Free To Use Gameplay 4K 60FPS - Minecraft Parkour.mp4
+2025-06-06 17:36:32,867 - generators.youtube.composer - INFO - ✅ Fond sélectionné : Free To Use Gameplay 4K 60FPS - Minecraft Parkour.mp4
+2025-06-06 17:36:59,087 - generators.youtube.composer - INFO - ✅ Clip composé : videos\exports\yt_2\part_3.mp4
+2025-06-06 17:36:59,087 - generators.youtube.composer - INFO - 📁 Taille du fichier : 3.14 MB

@@ -1,0 +1,4 @@
+2025-06-06 17:17:59,047 - generators.youtube.slicer - INFO - ✂️ Vidéo à découper : series\yt_2\original.mp4 (140.0 secondes)
+2025-06-06 17:18:09,124 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_2\parts\part_1.mp4 (71.0s)
+2025-06-06 17:18:18,976 - generators.youtube.slicer - INFO - 🎬 Exporté : series\yt_2\parts\part_2.mp4 (69.0s)
+2025-06-06 17:18:20,147 - generators.youtube.composer - ERROR - ❌ Vidéo introuvable : series\yt_2\parts\part1.mp4

@@ -1,0 +1,27 @@
+2025-06-06 17:17:37,444 - prompts - INFO - 📥 Prompts personnalisés chargés depuis custom_prompts.json
+2025-06-06 17:17:37,445 - __main__ - INFO - 🚀 Traitement de la vidéo : https://www.youtube.com/watch?v=RLbUjVb0DS4 (slug: yt_2)
+2025-06-06 17:17:40,431 - __main__ - INFO - 📁 Vidéo téléchargée : series\yt_2\original.mp4
+2025-06-06 17:17:58,881 - __main__ - INFO - 📝 Transcription obtenue (41 segments)
+2025-06-06 17:18:18,977 - __main__ - INFO - ✂️ 2 clips générés
+2025-06-06 17:18:18,977 - generators.youtube.description_generator - INFO - 🧾 Génération de caption pour bot1
+2025-06-06 17:18:18,977 - generators.youtube.description_generator - INFO - 🔮 Génération du hook avec OpenAI
+2025-06-06 17:18:18,983 - generators.youtube.description_generator - DEBUG - 📜 Prompt envoyé :
+Generate a catchy TikTok-style hook (4–6 words max) based on the following transcript:
+
+ 3, 2, 1...  Quoi ?  Il va te t'aider cassé ?  Oh bah dis pas ça, chuchotement.  Non mais j'ai eu une amie, sa fille il lui arrive exactement la même chose.  Pourquoi il est pas là ? Il devait être là.  C'est pas apparu tout de suite et en fait c'était au bout de...  J'ai plus de sept ou dix jours, ben je crois.  Dix jours ? Oui.  Ok.  Ah, j'ai l'idée.  Le psychanalyste, Donald Winnicott, qui s'est penché sur les objets dit transitionnel,  dont le doodou fait parti, a dit que...  Ah, pfff.  C'est ridicule de faire ça.  J'ai eu une amie qui m'a dit que, dans certains cas...  La gaze ?  Oh ouais, non.  Putain.  La seule de la famille à pas savoir quoi.  C'est peut-être une bonne chose ?  Bah non, non.  La famille, ils savent tous et puis ceux qui savent pas c'est des cons.  C'est des démiles, des abrutides et...
+
+It should be intriguing, absurd or funny, like:
+- "This IKEA trick broke my bed"
+- "Even the doctor was shocked"
+- "I found a key in my burger"
+2025-06-06 17:18:18,983 - generators.youtube.description_generator - DEBUG - ⚙️ Modèle = gpt-3.5-turbo, Température = 0.95
+2025-06-06 17:18:20,140 - generators.youtube.description_generator - INFO - ✅ Hook généré : Psychanalyst secrets revealed: Doodou dilemma
+2025-06-06 17:18:20,140 - generators.youtube.description_generator - INFO - ✅ Hook sauvegardé : series\yt_2\hooks\part1.txt
+2025-06-06 17:18:20,147 - __main__ - INFO - ✅ Hook copié comme caption TikTok : videos\exports\yt_2\part1_caption.txt
+2025-06-06 17:18:20,147 - __main__ - ERROR - ❌ Pipeline échoué.
+Traceback (most recent call last):
+  File "D:\betisespython\blocs\youtubeauto\main.py", line 57, in main
+    composer.compose_clip(
+  File "D:\betisespython\blocs\youtubeauto\generators\youtube\composer.py", line 26, in compose_clip
+    raise FileNotFoundError(f"❌ Vidéo introuvable : {part_path}")
+FileNotFoundError: ❌ Vidéo introuvable : series\yt_2\parts\part1.mp4
