@@ -1,7 +1,15 @@
 # test/test_composer.py
 
 import sys, os
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+import importlib.util
+
+for mod in ("moviepy", "PIL"):
+    if importlib.util.find_spec(mod) is None:
+        print(f"SKIPPED: {mod} non installé")
+        sys.exit(0)
 
 from generators.youtube.composer import compose_clip
 
